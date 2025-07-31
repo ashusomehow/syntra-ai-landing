@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Off-white */
+    --foreground: 0 0% 8%; /* Off-black */
+    --card: 0 0% 100%; /* Pure white for cards */
+    --card-foreground: 0 0% 8%; /* Off-black */
+    --popover: 0 0% 100%; /* Pure white */
+    --popover-foreground: 0 0% 8%; /* Off-black */
+    --primary: 0 0% 8%; /* Off-black */
+    --primary-foreground: 0 0% 98%; /* Off-white */
+    --secondary: 0 0% 96%; /* Light gray */
+    --secondary-foreground: 0 0% 8%; /* Off-black */
+    --muted: 0 0% 96%; /* Light gray */
+    --muted-foreground: 0 0% 45%; /* Medium gray */
+    --accent: 0 0% 96%; /* Light gray */
+    --accent-foreground: 0 0% 8%; /* Off-black */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%; /* Off-white */
+    --border: 0 0% 90%; /* Light border */
+    --input: 0 0% 90%; /* Light input */
+    --ring: 0 0% 8%; /* Off-black */
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 0 0% 8%; /* Off-black */
+    --foreground: 0 0% 98%; /* Off-white */
+    --card: 0 0% 12%; /* Dark gray */
+    --card-foreground: 0 0% 98%; /* Off-white */
+    --popover: 0 0% 12%; /* Dark gray */
+    --popover-foreground: 0 0% 98%; /* Off-white */
+    --primary: 0 0% 98%; /* Off-white */
+    --primary-foreground: 0 0% 8%; /* Off-black */
+    --secondary: 0 0% 15%; /* Dark gray */
+    --secondary-foreground: 0 0% 98%; /* Off-white */
+    --muted: 0 0% 15%; /* Dark gray */
+    --muted-foreground: 0 0% 65%; /* Light gray */
+    --accent: 0 0% 15%; /* Dark gray */
+    --accent-foreground: 0 0% 98%; /* Off-white */
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%; /* Off-white */
+    --border: 0 0% 20%; /* Dark border */
+    --input: 0 0% 20%; /* Dark input */
+    --ring: 0 0% 98%; /* Off-white */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+/* Custom animations for the flowchart */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 640px) {
+  .animate-fade-in-up {
+    animation-duration: 0.4s;
+  }
+}
