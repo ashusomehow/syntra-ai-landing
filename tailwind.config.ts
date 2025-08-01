@@ -12,7 +12,18 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+      fontFamily: {
+        'heading': ['Cabinet Grotesk', 'sans-serif'],
+        'body': ['Inter Tight', 'sans-serif'],
+      },
   		colors: {
+        // Syntra brand colors
+        'syntra': {
+          primary: '#3A60E7',
+          secondary: '#C091E4',
+          accent: '#261451',
+          light: '#F1F5F3',
+        },
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
